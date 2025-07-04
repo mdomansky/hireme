@@ -8,7 +8,7 @@ for coord in "${COMMITS[@]}"; do
   DAY=${coord##*:}
 
   # Найдём первое воскресенье года и прибавим WEEK * 7 + DAY дней
-  START_DATE="2024-07-06" #sunday
+  START_DATE="2025-07-06" #sunday
   COMMIT_DATE=$(date -d "$START_DATE + $((WEEK * 7 + DAY)) days" +%Y-%m-%d)
 
   # Проверяем: если сегодня эта дата — делаем коммиты
