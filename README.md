@@ -1,6 +1,7 @@
 # How to install
 * Install Git 
-* `git clone`
+* Go to the project folder, example `/var/www/hireme/`
+* `git clone git@github.com:mdomansky/hireme.git`
 * Check that `git pull` works correct
 
 # How to cron
