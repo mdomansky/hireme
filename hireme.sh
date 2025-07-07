@@ -21,7 +21,7 @@ for coord in "${COMMITS[@]}"; do
       git add random.txt
       git commit -m "hire me"
     done
-    git push
+    git push --force
     break
   fi
 done
