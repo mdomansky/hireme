@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ./text.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/text.sh"
 
 # Перебираем каждую координату
 for coord in "${COMMITS[@]}"; do
