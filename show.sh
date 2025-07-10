@@ -6,7 +6,8 @@ WEEKS=52
 # Initialize an empty matrix with 7 rows and WEEKS columns
 declare -A MATRIX
 
-source ./text.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/text.sh"
 
 # Fill matrix with empty cells (.)
 for ((week=0; week<WEEKS; week++)); do

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ./text.sh
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/text.sh"
 
 # Перебираем каждую координату
 for coord in "${COMMITS[@]}"; do
@@ -15,12 +16,13 @@ for coord in "${COMMITS[@]}"; do
   TODAY=$(date +%Y-%m-%d)
 
   if [[ "$COMMIT_DATE" == "$TODAY" ]]; then
+      git pull origin main
     for i in {1..25}; do
       echo "$RANDOM" > random.txt
       git add random.txt
       git commit -m "hire me"
     done
-    git push
+    git push --force
     break
   fi
 done

@@ -11,4 +11,4 @@ This script generates commit activity in the shape of the text **"HIRE ME"** on 
 
 ### How to cron
 * `crontab -e`
-* add `0 9 * * * /bin/bash /path/to/your/script.sh` for everyday run
+* add `0 9 * * * cd /var/www/hireme/ && /bin/bash /var/www/hireme/script.sh` for everyday run
