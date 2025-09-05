@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/text.sh"
@@ -16,9 +16,9 @@ for coord in "${COMMITS[@]}"; do
   TODAY=$(date +%Y-%m-%d)
 
   if [[ "$COMMIT_DATE" == "$TODAY" ]]; then
-      git pull origin main
+    git pull origin main
     for i in {1..25}; do
-      echo "$RANDOM" > random.txt
+      echo "$RANDOM" >random.txt
       git add random.txt
       git commit -m "hire me"
     done
